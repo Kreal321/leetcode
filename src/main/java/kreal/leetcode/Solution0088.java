@@ -44,35 +44,37 @@ package kreal.leetcode;
  */
 public class Solution0088 {
 
-    public void sort(int[] s) {
-        for(int i = 1; i < s.length; i++) {
-            if(s[i] < s[i-1]) {
-                int temp = s[i-1];
-                s[i-1]  = s[i];
-                s[i] = temp;
-            }
-        }
-    }
-    
+	/**
+	 *  Time: o(m + n)
+	 *  Memory Usage: 43 MB
+	 *  Runtime: 0 ms
+	 */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        if(n > 0){
-            for(int i = 0; i < nums1.length - n; i++) {
-                if(nums1[i] > nums2[0]) {
-                    int temp = nums2[0];
-                    nums2[0] = nums1[i];
-                    nums1[i] = temp;
-                    sort(nums2);
-                }
-            }
-            
-            int j = 0;
-            for(int i = nums1.length - n; i < nums1.length; i++){
-                nums1[i] = nums2[j];
-                j++;
-            }
-
+        int index1 = nums1.length - n - 1;
+        int index2 = n - 1;
+    	
+        for(int i = nums1.length - 1; i >= 0; i--) {
+        	if(index1 == -1) {
+        		nums1[i] = nums2[index2];
+        		index2--;
+        		continue;
+        	}
+        	
+        	if(index2 == -1) {
+        		nums1[i] = nums1[index1];
+        		index1--;
+        		continue;
+        	}
+        	
+        	if(nums1[index1] > nums2[index2]) {
+        		nums1[i] = nums1[index1];
+        		index1--;
+        	} else {
+        		nums1[i] = nums2[index2];
+        		index2--;
+        	}
         }
-
+    	
     }
 	
 }
