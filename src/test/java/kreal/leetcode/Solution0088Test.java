@@ -19,7 +19,7 @@ public class Solution0088Test {
 		Solution0088 solution = new Solution0088();
 		solution.merge(nums1, 3, nums2, 3);
 
-		assertArrayEquals(nums1, expected);
+		assertArrayEquals(expected, nums1);
 	}
 	
 	@Test
@@ -31,7 +31,7 @@ public class Solution0088Test {
 		Solution0088 solution = new Solution0088();
 		solution.merge(nums1, 0, nums2, 1);
 
-		assertArrayEquals(nums1, expected);
+		assertArrayEquals(expected, nums1);
 	}
 	
 	@Test
@@ -43,6 +43,6 @@ public class Solution0088Test {
 		Solution0088 solution = new Solution0088();
 		solution.merge(nums1, 1, nums2, 0);
 
-		assertArrayEquals(nums1, expected);
+		assertArrayEquals(expected, nums1);
 	}
 }

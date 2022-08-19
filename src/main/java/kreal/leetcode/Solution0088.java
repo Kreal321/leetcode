@@ -50,7 +50,7 @@ public class Solution0088 {
 	 *  Runtime: 0 ms
 	 */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int index1 = nums1.length - n - 1;
+        int index1 = m - 1;
         int index2 = n - 1;
     	
         for(int i = nums1.length - 1; i >= 0; i--) {
