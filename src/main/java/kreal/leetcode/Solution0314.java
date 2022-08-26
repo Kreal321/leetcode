@@ -10,19 +10,6 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.TreeMap;
 
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode() {}
-	TreeNode(int val) { this.val = val; }
-	TreeNode(int val, TreeNode left, TreeNode right) {
-       this.val = val;
-       this.left = left;
-       this.right = right;
-    }
-}
-
 
 /**
  * 122. Best Time to Buy and Sell Stock
@@ -30,9 +17,21 @@ class TreeNode {
  */
 public class Solution0314 {
 
+	class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+		TreeNode() {}
+		TreeNode(int val) { this.val = val; }
+		TreeNode(int val, TreeNode left, TreeNode right) {
+	       this.val = val;
+	       this.left = left;
+	       this.right = right;
+	    }
+	}
 	
 	/**
-	 *  Time: o(n)
+	 *  Time: o(logn)
 	 *  Space: o(1)
 	 *  Memory Usage: 42 MB
 	 *  Runtime: 3 ms

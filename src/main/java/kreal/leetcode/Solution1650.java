@@ -3,12 +3,7 @@ package kreal.leetcode;
 
 import java.util.HashSet;
 
-class Node {
-    public int val;
-    public Node left;
-    public Node right;
-    public Node parent;
-};
+
 
 /**
  * 122. Best Time to Buy and Sell Stock
@@ -16,6 +11,13 @@ class Node {
  */
 public class Solution1650 {
 
+	class Node {
+	    public int val;
+	    public Node left;
+	    public Node right;
+	    public Node parent;
+	};
+	
 	/**
 	 *  Time: o(n)
 	 *  Space: o(1)
